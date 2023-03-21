@@ -1,11 +1,19 @@
 <script>
-	import { PerspectiveCamera, DirectionalLight, AmbientLight, Mesh } from '@threlte/core';
+	import { PerspectiveCamera, DirectionalLight, AmbientLight, Mesh, useFrame } from '@threlte/core';
 	import { MeshStandardMaterial, IcosahedronGeometry } from 'three';
 	import { tweened } from 'svelte/motion';
 
-	const t = tweened(3, { duration: 2000 });
-	setTimeout(() => {
-		t.set(-3);
+	// tweened take a new number and go from defined number (which is 3 in this case) to that new number
+	// whithin defined duration (which is 2000 in our case)
+	const t = tweened(0, { duration: 2000 });
+	const t2 = tweened(1, { duration: 50 });
+	// setTimeout(() => {
+	// 	t.set(-3);
+	// });
+
+	let r = 0;
+	useFrame(() => {
+		r += 0.01;
 	});
 </script>
 
@@ -14,9 +22,23 @@
 <DirectionalLight />
 <AmbientLight />
 
+<!-- when we want to interact with any 3d object we must set the properties to 'interactive' -->
 <Mesh
 	geometry={new IcosahedronGeometry()}
 	material={new MeshStandardMaterial({ color: 'seagreen' })}
-	position={{ x: 0, y: 0, z: 15 }}
-	rotation={{ x: 0, y: $t, z: 0 }}
+	position={{ x: $t, y: 0, z: 15 }}
+	rotation={{ x: 0, y: r, z: 0 }}
+	scale={$t2}
+	interactive
+	on:pointerleave={() => {
+		$t2 = 1;
+		// console.log('reverse pointer enter');
+	}}
+	on:pointerenter={() => {
+		$t2 = 1.3;
+		// console.log('pointer enter');
+	}}
+	on:click={() => {
+		$t = $t > 0 ? -4 : 4;
+	}}
 />
