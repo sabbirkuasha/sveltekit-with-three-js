@@ -11,9 +11,9 @@
 	// 	t.set(-3);
 	// });
 
-	let r = 0;
+	let rotation = 0;
 	useFrame(() => {
-		r += 0.01;
+		rotation += 0.01;
 	});
 </script>
 
@@ -27,7 +27,7 @@
 	geometry={new IcosahedronGeometry()}
 	material={new MeshStandardMaterial({ color: 'seagreen' })}
 	position={{ x: $t, y: 0, z: 15 }}
-	rotation={{ x: 0, y: r, z: 0 }}
+	rotation={{ x: rotation, y: 0, z: rotation }}
 	scale={$t2}
 	interactive
 	on:pointerleave={() => {
