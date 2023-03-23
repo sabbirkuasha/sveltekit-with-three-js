@@ -1,0 +1,36 @@
+{
+  "sheetsById": {
+    "default": {
+      "staticOverrides": {
+        "byObject": {
+          "Lights / Main": {
+            "Color": {
+              "r": 0.8901960784313725,
+              "g": 0.8901960784313725,
+              "b": 0.8901960784313725,
+              "a": 1
+            },
+            "Intensity": 1.5
+          },
+          "Car": {
+            "Position": {
+              "x": 0,
+              "y": 0
+            },
+            "Rotation": {
+              "y": 0
+            },
+            "Scale": {
+              "x": 1
+            },
+            "CastShadow": true
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "8BGEwZp_TBiz1sjl"
+  ]
+}

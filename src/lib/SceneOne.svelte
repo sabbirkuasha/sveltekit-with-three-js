@@ -4,7 +4,7 @@
 	import { tweened } from 'svelte/motion';
 
 	// tweened take a new number and go from defined number (which is 3 in this case) to that new number
-	// whithin defined duration (which is 2000 in our case)
+	// within defined duration (which is 2000 in our case)
 	const t = tweened(0, { duration: 2000 });
 	const t2 = tweened(1, { duration: 50 });
 	// setTimeout(() => {

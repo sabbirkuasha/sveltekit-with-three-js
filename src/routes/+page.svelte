@@ -24,7 +24,7 @@
 
 	<div class="canvas-wrapper ring h-[700px]">
 		<Canvas shadows={true}>
-			<Theatre>
+			<Theatre studio={true}>
 				<SceneTwo />
 			</Theatre>
 			<!-- SceneTwo -->
