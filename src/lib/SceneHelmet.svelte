@@ -9,13 +9,15 @@
 	} from '@threlte/core';
 	import { Environment, GLTF } from '@threlte/extras';
 	// const url = '3d/DamagedHelmet/glTF/DamagedHelmet.gltf';
-	const url = '3d/meetMat_exp/meetMat.gltf';
+	// const url = '3d/meetMat_exp/meetMat.gltf';
+	const url = '3d/paperCup/PaperCup.gltf';
 </script>
 
-<!-- <Environment path="/hdr/" files="stadium_01_2k.hdr" /> -->
-<Environment path="/hdr/" files="Eden_Diffuse8.hdr" />
+<Environment path="/hdr/" files="stadium_01_2k.hdr" />
+<!-- <Environment path="/hdr/" files="Eden_Diffuse8.hdr" /> -->
 <PerspectiveCamera position={{ x: 5, y: 2, z: 5 }} fov={25}>
 	<OrbitControls autoRotate enableDamping />
 </PerspectiveCamera>
 <DirectionalLight />
-<GLTF {url} scale={0.2} position={{ x: 0, y: -1.35, z: 0 }} />
+<!-- <GLTF {url} scale={0.2} position={{ x: 0, y: -1.35, z: 0 }} /> -->
+<GLTF {url} scale={1.5} position={{ x: 0, y: -1.35, z: 0 }} />
