@@ -2,6 +2,7 @@
 	import { PerspectiveCamera, DirectionalLight, AmbientLight, Mesh, useFrame } from '@threlte/core';
 	import { MeshStandardMaterial, IcosahedronGeometry } from 'three';
 	import { tweened } from 'svelte/motion';
+	import { HTML } from '@threlte/extras';
 
 	// tweened take a new number and go from defined number (which is 3 in this case) to that new number
 	// within defined duration (which is 2000 in our case)
@@ -21,6 +22,9 @@
 
 <DirectionalLight />
 <AmbientLight />
+<HTML>
+	<h1>Hello World</h1>
+</HTML>
 
 <!-- when we want to interact with any 3d object we must set the properties to 'interactive' -->
 <Mesh

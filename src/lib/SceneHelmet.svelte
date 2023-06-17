@@ -7,10 +7,10 @@
 		PerspectiveCamera,
 		useFrame
 	} from '@threlte/core';
-	import { Environment, GLTF } from '@threlte/extras';
-	// const url = '3d/DamagedHelmet/glTF/DamagedHelmet.gltf';
+	import { Environment, GLTF, HTML } from '@threlte/extras';
+	const url = '3d/DamagedHelmet/glTF/DamagedHelmet.gltf';
 	// const url = '3d/meetMat_exp/meetMat.gltf';
-	const url = '3d/paperCup/PaperCup.gltf';
+	// const url = '3d/paperCup/PaperCup.gltf';
 </script>
 
 <Environment path="/hdr/" files="stadium_01_2k.hdr" />
@@ -20,4 +20,7 @@
 </PerspectiveCamera>
 <DirectionalLight />
 <!-- <GLTF {url} scale={0.2} position={{ x: 0, y: -1.35, z: 0 }} /> -->
+<HTML transform position={{ x: 0, y: 0, z: -1.5 }} center sprite occlude>
+	<h1>Hello World</h1>
+</HTML>
 <GLTF {url} scale={1.5} position={{ x: 0, y: -1.35, z: 0 }} />
